@@ -38,7 +38,8 @@ Build-Depends:
  libudev-dev,
  libdbus-glib-1-dev,
  libpam0g-dev,
- uuid-dev, 
+ uuid-dev,
+ libwayland-dev,
  libxml2-dev,
  libgstreamer1.0-dev | libgstreamer0.10-dev,
  libgstreamer-plugins-base1.0-dev | libgstreamer-plugins-base0.10-dev
@@ -51,7 +52,7 @@ Package: freerdp-nightly
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Provides: freerdp
-Description: RDP client for Windows Terminal Services (X11 client)
+Description: RDP client for Windows Terminal Services
  FreeRDP is a libre client/server implementation of the Remote
  Desktop Protocol (RDP).
  .
@@ -69,7 +70,7 @@ Description: RDP client for Windows Terminal Services (X11 client)
   * Windows 2016/2019 Server
   * Windows 10
  .
- This package contains the X11 based client.
+ This package contains the X11 and the wayland based clients.
 
 Package: freerdp-nightly-dev
 Section: libdevel
@@ -88,7 +89,7 @@ Priority: extra
 Architecture: any
 Depends:
  freerdp-nightly (= ${binary:Version}), ${misc:Depends},
-Description: RDP client for Windows Terminal Services (X11 client, debug symbols)
+Description: RDP client for Windows Terminal Services (debug symbols)
  FreeRDP is a libre client/server implementation of the Remote
  Desktop Protocol (RDP).
  .
